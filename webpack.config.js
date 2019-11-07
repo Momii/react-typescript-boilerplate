@@ -16,6 +16,4 @@ switch (process.env.NODE_ENV) {
     break;
 }
 
-console.log(envModule);
-
 module.exports = merge(common, envModule);

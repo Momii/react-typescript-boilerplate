@@ -1,9 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
-const postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
-const autoprefixer = require('autoprefixer');
-const postcssNormalize = require('postcss-normalize');
+// Plugins
 const StylelintWebpackPlugin = require('stylelint-webpack-plugin');
+// CSS loader plugins
+const postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
+const postcssNormalize = require('postcss-normalize');
+const postcssPresetEnv = require('postcss-preset-env');
 
 /**
  * @type import('webpack').Configuration
@@ -37,7 +39,12 @@ module.exports = {
               sourceMap: true,
               plugins: [
                 postcssFlexbugsFixes,
-                autoprefixer({ grid: 'autoplace' }),
+                postcssPresetEnv({
+                  autoprefixer: {
+                    grid: 'autoplace',
+                    flexbox: 'no-2009',
+                  }
+                }),
                 postcssNormalize(),
               ],
             }
