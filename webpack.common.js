@@ -1,5 +1,6 @@
 const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 /**
  * @type import('webpack').Configuration
@@ -18,7 +19,21 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader'
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true,
+            babelrc: false,
+            presets: [
+              ['@babel/preset-env',],
+              '@babel/preset-typescript',
+              '@babel/preset-react',
+            ],
+            plugins: [
+              'react-hot-loader/babel'
+            ]
+          }
+        }
       },
     ],
   },
@@ -35,5 +50,6 @@ module.exports = {
       template: './src/index.html',
       title: 'hello'
     }),
+    new ForkTsCheckerWebpackPlugin(),
   ]
 };
