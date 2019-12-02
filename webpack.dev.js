@@ -43,7 +43,7 @@ module.exports = {
                   autoprefixer: {
                     grid: 'autoplace',
                     flexbox: 'no-2009',
-                  }
+                  },
                 }),
                 postcssNormalize(),
               ],
