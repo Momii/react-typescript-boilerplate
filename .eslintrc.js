@@ -1,10 +1,10 @@
 module.exports = {
-  plugins: ["react", "@typescript-eslint"],
+  plugins: ['react', '@typescript-eslint'],
   extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/eslint-recommended"
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/eslint-recommended'
   ],
   env: {
     browser: true,
@@ -12,11 +12,11 @@ module.exports = {
   },
   settings: {
     react: {
-      pragma: "React",
-      version: "detect"
+      pragma: 'React',
+      version: 'detect'
     }
   },
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -24,6 +24,6 @@ module.exports = {
     useJSXTextNode: true
   },
   rules: {
-    "react/prop-types": "off"
+    'react/prop-types': 'off'
   }
 }
