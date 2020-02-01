@@ -5,7 +5,7 @@
   "author": "Yusuke Momii",
   "license": "MIT",
   "scripts": {
-    "eslint": "eslint -c ./.eslintrc.json 'src/**/*.{ts,tsx}'",
+    "eslint": "eslint -c ./.eslintrc.js 'src/**/*.{ts,tsx}'",
     "lintcss": "stylelint \"src/css/**/*.scss\"",
     "lintcss:fix": "yarn lintcss --fix",
     "start": "NODE_ENV='development' webpack-dev-server --config webpack.config",
@@ -25,6 +25,7 @@
     "css-loader": "^3.2.0",
     "eslint": "^6.4.0",
     "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
     "favicons-webpack-plugin": "^1.0.2",
     "fibers": "^4.0.1",
     "file-loader": "^4.2.0",

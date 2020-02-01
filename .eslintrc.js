@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'react-hooks'],
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -26,4 +26,4 @@ module.exports = {
   rules: {
     'react/prop-types': 'off'
   }
-}
+};
