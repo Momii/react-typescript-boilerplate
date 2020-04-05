@@ -24,6 +24,7 @@ module.exports = {
     useJSXTextNode: true
   },
   rules: {
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+    'comma-dangle': ['warn', 'always-multiline']
   }
 };
